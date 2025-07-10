@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AION실 비전 및 목표 (상세)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdf6f6;
+            --card-bg: #ffffff;
+            --primary-color: #a3b1e3;
+            --secondary-color: #f5c4c4;
+            --accent-color-1: #f9eac3;
+            --accent-color-2: #c6e3d5;
+            --text-color: #333333;
+            --header-color: #525252;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 900;
+            color: var(--header-color);
+            margin-bottom: 5px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #777;
+        }
+        
+        .vision-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .vision-section .aion-meaning {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .vision-section .vision-text {
+            font-size: 1.2em;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .goal-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+        }
+
+        .goal-card .icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        .goal-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--header-color);
+        }
+        
+        .goal-card:nth-child(1) { border-bottom: 5px solid var(--secondary-color); }
+        .goal-card:nth-child(2) { border-bottom: 5px solid var(--accent-color-1); }
+        .goal-card:nth-child(3) { border-bottom: 5px solid var(--accent-color-2); }
+
+        .details-section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .detail-card h3 {
+            font-size: 1.6em;
+            color: var(--header-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .detail-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .detail-card ul li {
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23a3b1e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        
+        /* --- 성과관리 요약 카드 스타일 --- */
+        .summary-card-section {
+            background: linear-gradient(135deg, #e9eafc, #f8e9f8);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+        }
+        .summary-content {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .summary-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+        .summary-box h4 {
+            font-size: 1.4em;
+            color: var(--header-color);
+            margin: 0 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .summary-box .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .summary-box p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .longterm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .longterm-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+        }
+
+        .longterm-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: var(--header-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .longterm-card .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .longterm-card:nth-child(1) h3 { color: var(--secondary-color); }
+        .longterm-card:nth-child(2) h3 { color: var(--accent-color-1); }
+        .longterm-card:nth-child(3) h3 { color: var(--accent-color-2); }
+
+        .longterm-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .longterm-card ul li {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>AION실</h1>
+            <p class="subtitle">비전 및 목표</p>
+        </header>
+
+        <section class="vision-section">
+            <p class="aion-meaning">AI Operation Nexus</p>
+            <p class="vision-text">"AI 기술을 활용하여 본부 전체의 운영을 혁신하고, 모든 관련 부서와 프로세스를 연결/통합하는 핵심 조직(Nexus)이 되자"</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">3대 목표</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="icon">🚀</div>
+                    <h3>부가가치 창출</h3>
+                    <p>AI를 활용하여 30%(+α) 이상의 부가가치를 창출합니다.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="icon">💡</div>
+                    <h3>직무역량 확장</h3>
+                    <p>확보된 자원과 창의성 발현을 통해 직무 역량을 확장합니다.</p>
+                </div>
+                <div class="goal-card">
+                    <div class="icon">🌱</div>
+                    <h3>조직문화 안착</h3>
+                    <p>AI 활용 역량 강화를 체계화하여 조직 문화로 안착시킵니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-section">
+            <h2 class="section-title">핵심 과제 (Core Tasks)</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h3>기반 구축 및 고도화</h3>
+                    <ul>
+                        <li>핵심/반복업무 자동화로 생산성 향상</li>
+                        <li>효율성 증대 및 비용절감 성공사례 축적</li>
+                        <li>기술적 지원요소 정의 및 제안</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>역량 확장</h3>
+                    <ul>
+                        <li>신규 AI 기술 습득으로 업무 퀄리티 향상</li>
+                        <li>기존에 없던 새로운 업무로 가치 창출</li>
+                        <li>적극적 시도를 통한 경쟁 우위 확보</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>조직문화 혁신</h3>
+                    <ul>
+                        <li>교육, 우수사례 공유 등 학습문화 조성</li>
+                        <li>업스킬링 프로그램 구축 및 지원</li>
+                        <li>새로운 직무 도전 장려 및 환경 제공</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="summary-card-section">
+            <h2 class="section-title">성과 관리 및 보상</h2>
+            <div class="summary-content">
+                <div class="summary-box">
+                    <h4><span class="icon">🎯</span> 평가 핵심</h4>
+                    <p>AI를 활용한 <strong>가치 창출</strong>(효율화, 퀄리티 개선, 신규 사업) 및 <strong>역량 강화/전파</strong>를 핵심 기준으로 평가합니다.</p>
+                </div>
+                <div class="summary-box">
+                    <h4><span class="icon">🏆</span> 보상 원칙</h4>
+                    <p>달성한 성과는 <strong>연말 평가 및 연봉</strong>에 직접 반영되며, 탁월한 기여 시 <strong>스페셜 인센티브</strong>와 <strong>다양한 성장 기회</strong>를 제공합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">장기적인 방향</h2>
+            <div class="longterm-grid">
+                <div class="longterm-card">
+                    <h3><span class="icon">🛠️</span>기반구축 및 고도화</h3>
+                    <ul>
+                        <li>CS 자동화 (챗봇, AI상담, 리뷰 대응)</li>
+                        <li>운영 보고서 및 모니터링 자동화</li>
+                        <li>서비스 히스토리 통합분석 AI 어시스턴트</li>
+                        <li>CRM 및 플랫폼 기획/관리 업무 자동화</li>
+                    </ul>
+                </div>
+                <div class="longterm-card">
+                    <h3><span class="icon">✨</span>역량 확장</h3>
+                    <ul>
+                        <li>데이터 분석 기반 의사결정 지원 (BI 구축)</li>
+                        <li>AI를 통한 서비스 기획 및 실험</li>
+                        <li>지능형 QA 구축 (오류 자가수정)</li>
+                        <li>디자인 리소스 및 크리에이티브 생성</li>
+                        <li>사업개발 및 전략 수립 지원</li>
+                    </ul>
+                </div>
+                <div class="longterm-card">
+                    <h3><span class="icon">🌐</span>조직문화 혁신</h3>
+                    <ul>
+                        <li>AI 기술 인프라 및 상용 솔루션 도입</li>
+                        <li>직원 교육 및 AI 전문역량 강화 </li>
+                        <li>성과 관리 기준의 지속적인 개선</li>
+                        <li>성공과 실패에 제한 없는 적극적 격려와 지원</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
