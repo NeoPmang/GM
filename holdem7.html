@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼다운 홀덤 7월 업데이트 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .flowchart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #01949A;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-[#F5F5F5]">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-12">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#004369] mb-2">쇼다운 홀덤 7월 업데이트</h1>
+            <p class="text-lg md:text-xl text-gray-600">플레이어 여러분의 경험을 혁신적으로 개선합니다!</p>
+        </header>
+
+        <main>
+            <section id="multitable" class="mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#004369]">멀티테이블, 더 스마트하게!</h2>
+                    <p class="mt-2 text-gray-700 max-w-3xl mx-auto">여러 테이블을 동시에 플레이하는 것이 그 어느 때보다 편리해집니다. UI 개선으로 중요한 순간을 놓치지 마세요.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105">
+                        <span class="text-5xl mb-3">📌</span>
+                        <h3 class="text-xl font-bold text-[#004369] mb-2">이동 버튼 고정</h3>
+                        <p class="text-gray-600">이제 어떤 상황에서도 화면 상단에서 바로 테이블을 이동할 수 있습니다.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105">
+                        <span class="text-5xl mb-3">⚡️</span>
+                        <h3 class="text-xl font-bold text-[#004369] mb-2">메모리 효율화</h3>
+                        <p class="text-gray-600">불필요한 채널은 자동으로 정리되어 더 쾌적한 환경을 제공합니다.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105">
+                        <span class="text-5xl mb-3">❗</span>
+                        <h3 class="text-xl font-bold text-[#004369] mb-2">베팅 턴 강조</h3>
+                        <p class="text-gray-600">내 턴이 되면 강력한 아이콘으로 알려주어 액션을 놓치지 않습니다.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 md:col-span-2 lg:col-span-1 flex flex-col items-center text-center">
+                        <span class="text-5xl mb-3">⚙️</span>
+                        <h3 class="text-xl font-bold text-center text-[#004369] mb-2">스마트 포커칩 ON/OFF</h3>
+                        <p class="text-center text-gray-600">내 턴에 자동으로 테이블이 이동하는 기능 ON/OFF 설정이 추가되어, 사용자가 원하는 대로 제어할 수 있습니다. 기본값은 ON입니다.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 md:col-span-2">
+                        <h3 class="text-xl font-bold text-center text-[#004369] mb-2">팝업 관리 명확화</h3>
+                        <p class="text-center text-gray-600 mb-4">게임의 흐름을 방해하지 않도록 팝업 표시 규칙이 명확해졌습니다.</p>
+                        <div class="flex justify-around items-start mt-6">
+                            <div class="text-center w-1/2 px-2">
+                                <h4 class="font-bold text-lg text-teal-600">테이블 귀속 팝업</h4>
+                                <p class="text-sm text-gray-500 mt-1">게임 플레이와 직접 관련된 팝업 (바인, 리바이, 설정 등)</p>
+                            </div>
+                            <div class="w-px bg-gray-300 self-stretch"></div>
+                            <div class="text-center w-1/2 px-2">
+                                <h4 class="font-bold text-lg text-red-500">귀속 외 팝업</h4>
+                                <p class="text-sm text-gray-500 mt-1">시스템 공지 등 중요한 시스템 관련 팝업 (제재, 중복 접속 등)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reentry" class="mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#004369]">재입장, 이제 게임 안에서 바로!</h2>
+                    <p class="mt-2 text-gray-700 max-w-3xl mx-auto">탈락의 아쉬움은 뒤로 하고, 로비로 나갈 필요 없이 즉시 새로운 게임에 참여하세요.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-bold text-center text-[#004369] mb-6">새로운 인게임 리엔트리 과정</h3>
+                    <div class="flex flex-col md:flex-row md:justify-around items-center">
+                        <div class="flowchart-step w-48 h-24 bg-[#E5DDC8] rounded-lg shadow p-2">
+                            <p class="font-bold text-[#004369]">1. 게임 탈락</p>
+                        </div>
+                        <div class="flowchart-arrow w-full md:w-auto transform md:rotate-0">▼</div>
+                        <div class="flowchart-step w-48 h-24 bg-[#E5DDC8] rounded-lg shadow p-2">
+                            <p class="font-bold text-[#004369]">2. 결과 팝업에서<br/>'재참가' 버튼 클릭</p>
+                        </div>
+                        <div class="flowchart-arrow w-full md:w-auto transform md:rotate-0">▼</div>
+                        <div class="flowchart-step w-48 h-24 bg-[#DB1F48] text-white rounded-lg shadow p-2">
+                            <p class="font-bold">3. "지금 참가하기"로<br/>즉시 재입장</p>
+                        </div>
+                        <div class="flowchart-arrow w-full md:w-auto transform md:rotate-0">▼</div>
+                        <div class="flowchart-step w-48 h-24 bg-[#01949A] text-white rounded-lg shadow p-2">
+                            <p class="font-bold">4. 새로운 테이블 배정 및<br/>게임 시작!</p>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-500 mt-8 text-sm">입장 불가 조건(예: 손실 한도 초과) 발생 시, 명확한 안내 팝업이 표시됩니다.</p>
+                </div>
+            </section>
+            
+            <section id="tournament" class="mb-16">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#004369]">토너먼트, 더 공정하고 편리하게!</h2>
+                    <p class="mt-2 text-gray-700 max-w-3xl mx-auto">브레이크 타임부터 순위 산정 방식까지, 모두가 만족할 수 있도록 시스템을 개선했습니다.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-center text-[#004369] mb-2">새로운 동시 탈락 순위 기준</h3>
+                        <p class="text-center text-gray-600 mb-4">이제 엔트리 순서가 아닌, 실력과 직결되는 기준으로 순위가 결정됩니다.</p>
+                        <div class="chart-container">
+                            <canvas id="rankingChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                         <h3 class="text-xl font-bold text-[#004369] mb-4">정기 브레이크 타임</h3>
+                        <p class="text-6xl font-black text-[#DB1F48]">매시 55분</p>
+                        <p class="text-gray-600 mt-4">모든 토너먼트의 브레이크 타임이 고정되어 예측 가능한 휴식을 보장합니다.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                        <h3 class="text-xl font-bold text-[#004369] mb-4">실수 방지를 위한 개선</h3>
+                        <div class="relative">
+                            <button class="bg-gray-300 text-gray-500 font-bold py-2 px-4 rounded-lg">토너먼트 나가기</button>
+                            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl text-red-500 opacity-80 font-black">╳</span>
+                        </div>
+                        <p class="text-gray-600 mt-6">실수로 토너먼트를 나가는 것을 방지하기 위해 '나가기' 버튼을 제거했습니다.</p>
+                    </div>
+
+                     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                        <h3 class="text-xl font-bold text-[#004369] mb-4">쇼다운 연출 개선</h3>
+                         <span class="text-6xl mb-3">🎬</span>
+                        <p class="text-gray-600">내가 참여한 쇼다운 상황에서만 연출과 진동이 발생하며, 설정에서 ON/OFF가 가능합니다.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 border-t pt-8">
+            <p class="text-xl font-bold text-[#004369]">지금 바로 쇼다운 홀덤에서 새로운 기능들을 경험해보세요!</p>
+            <p class="text-sm text-gray-500 mt-2">© Showdown Hold'em. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength) => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines.length > 1 ? lines : label;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            size: 14,
+                            family: "'Noto Sans KR', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    titleFont: {
+                        size: 16,
+                        family: "'Noto Sans KR', sans-serif"
+                    },
+                    bodyFont: {
+                        size: 14,
+                        family: "'Noto Sans KR', sans-serif"
+                    },
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+        
+        // smartChipChart 관련 코드 제거됨
+
+        const rankingCtx = document.getElementById('rankingChart').getContext('2d');
+        new Chart(rankingCtx, {
+            type: 'bar',
+            data: {
+                labels: ['탈락 직전 칩 보유량', '족보 (Hand)', 'GSN (Game Serial Number)'].map(l => wrapLabel(l, 16)),
+                datasets: [{
+                    label: '순위 결정 우선순위',
+                    data: [100, 75, 50],
+                    backgroundColor: ['#DB1F48', '#004369', '#01949A'],
+                    borderColor: ['#FFFFFF'],
+                    borderWidth: 1,
+                    barThickness: 40
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: { display: false },
+                        grid: { display: false },
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: {
+                           font: {
+                                size: 14,
+                                weight: 'bold'
+                           }
+                        }
+                    }
+                },
+                plugins: {
+                    ...commonChartOptions.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
